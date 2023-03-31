@@ -1,0 +1,15 @@
+C:\Users\admin\Documents\GitHub\Templates2\hanoi tower\tower\tower\bin\Debug\net6.0\Hanoi.exe
+C:\Users\admin\Documents\GitHub\Templates2\hanoi tower\tower\tower\bin\Debug\net6.0\Hanoi.deps.json
+C:\Users\admin\Documents\GitHub\Templates2\hanoi tower\tower\tower\bin\Debug\net6.0\Hanoi.runtimeconfig.json
+C:\Users\admin\Documents\GitHub\Templates2\hanoi tower\tower\tower\bin\Debug\net6.0\Hanoi.dll
+C:\Users\admin\Documents\GitHub\Templates2\hanoi tower\tower\tower\bin\Debug\net6.0\Hanoi.pdb
+C:\Users\admin\Documents\GitHub\Templates2\hanoi tower\tower\tower\obj\Debug\net6.0\Hanoi.csproj.AssemblyReference.cache
+C:\Users\admin\Documents\GitHub\Templates2\hanoi tower\tower\tower\obj\Debug\net6.0\Hanoi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\admin\Documents\GitHub\Templates2\hanoi tower\tower\tower\obj\Debug\net6.0\Hanoi.AssemblyInfoInputs.cache
+C:\Users\admin\Documents\GitHub\Templates2\hanoi tower\tower\tower\obj\Debug\net6.0\Hanoi.AssemblyInfo.cs
+C:\Users\admin\Documents\GitHub\Templates2\hanoi tower\tower\tower\obj\Debug\net6.0\Hanoi.csproj.CoreCompileInputs.cache
+C:\Users\admin\Documents\GitHub\Templates2\hanoi tower\tower\tower\obj\Debug\net6.0\Hanoi.dll
+C:\Users\admin\Documents\GitHub\Templates2\hanoi tower\tower\tower\obj\Debug\net6.0\refint\Hanoi.dll
+C:\Users\admin\Documents\GitHub\Templates2\hanoi tower\tower\tower\obj\Debug\net6.0\Hanoi.pdb
+C:\Users\admin\Documents\GitHub\Templates2\hanoi tower\tower\tower\obj\Debug\net6.0\Hanoi.genruntimeconfig.cache
+C:\Users\admin\Documents\GitHub\Templates2\hanoi tower\tower\tower\obj\Debug\net6.0\ref\Hanoi.dll
