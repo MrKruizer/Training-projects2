@@ -14,7 +14,7 @@ namespace Hanoi
             Sections = GenerateTower();
             Draw();
             Play();
-            Console.WriteLine("")
+            Console.WriteLine(Consts.End);
         }
         public static void Draw()
         {
