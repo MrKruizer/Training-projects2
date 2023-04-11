@@ -2,9 +2,9 @@
 {
     public class Section
     {
-        public int Weight { get; set; }
+        public int Weight { get; init; }
         public int Tower { get; set; }
-        public int Number { get; set; }
+        public int Number { get; init; }
         public int NumberInTower { get; set; }
         public Section(int weight, int tower, int number)
         {
@@ -19,10 +19,9 @@
             if (Tower == tower) throw new Exception(Consts.EqualTower);
             List<Section> OutTowerSections = sections.FindAll(x => x.Tower == Tower);
             if (OutTowerSections.Count == 0)
-            {
                 throw new Exception(Consts.ExceptionNotFound);
-            }
-            if (OutTowerSections.Any(x=> x.Weight < Weight)) throw new Exception(Consts.ExceptionLowwerWeightFoundinOutTower);
+            if (OutTowerSections.Any(x=> x.Weight < Weight)) 
+                throw new Exception(Consts.ExceptionLowwerWeightFoundinOutTower);
             List<Section> OnTowerSections = sections.FindAll(x=>x.Tower == tower);
             if (OnTowerSections.Count == 0)
             {
@@ -34,7 +33,7 @@
             if (OnTowerSections.SingleOrDefault(x=>x.Weight <= Weight) is null)
             {
                 Tower = tower;
-                NumberInTower = OnTowerSections.Select(x=> x.NumberInTower).Max()+1;
+                NumberInTower = OnTowerSections.Count+1;
                 Program.Draw();
                 return;
             }
