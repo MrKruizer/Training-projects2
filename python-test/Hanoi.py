@@ -52,35 +52,67 @@ class section:
 		raise Exception('Target tower have section with less weight')
 
 
-#def play():
+def play():
+	while True:
+		i = input();
+		if len(i) == 0:
+			continue
+		i = i.strip().lower()
+		if i == 'quit':
+			break
+		elif i == 'auto':
+			generate_tower()
+			draw()
+			auto(1,3)
+		else:
+			if re.fullmatch(regex, i):
+				vals = i.split(' ')
+				if str.isnumeric(vals[0]) and str.isnumeric(vals[2]):
+					if ( vals[0] > 5 ):
+						print('Number of section out of range')
+					elif (vals[2] > 3 or vals[2] < 1):
+						print('Number of tower out of range')
+					else:
+						try:
+							sections[val[0]-1].rearrange(vals[2])
+						except Exception as e:
+							print(e)
+			else:
+				print('Incorrect instruction. Sample: 5 to 3')
+
+
 
 def auto(n, t):
 	if n <=0 or n > len(sections):
 		return 
-	if sections[n-1].tower == 1 and t == 3:
-		auto(n + 1, 2)
-		sections[n-1].rearrange(t)
-		auto(n+1, 3)
-	elif sections[n-1].tower == 1 and t == 2:
-		auto(n + 1, 3)
-		sections[n-1].rearrange(t)
-		auto(n+1, 2)
-	elif sections[n-1].tower == 2 and t == 1:
-		auto(n + 1, 3)
-		sections[n-1].rearrange(t)
-		auto(n+1, 1)
-	elif sections[n-1].tower == 2 and t == 3:
-		auto(n + 1, 1)
-		sections[n-1].rearrange(t)
-		auto(n+1, 3)
-	elif sections[n-1].tower == 3 and t == 1:
-		auto(n + 1, 2)
-		sections[n-1].rearrange(t)
-		auto(n+1, 1)
-	elif sections[n-1].tower == 3 and t == 2:
-		auto(n + 1, 1)
-		sections[n-1].rearrange(t)
-		auto(n+1, 2)
+	try:
+		if sections[n-1].tower == 1 and t == 3:
+			auto(n + 1, 2)
+			sections[n-1].rearrange(t)
+			auto(n+1, 3)
+		elif sections[n-1].tower == 1 and t == 2:
+			auto(n + 1, 3)
+			sections[n-1].rearrange(t)
+			auto(n+1, 2)
+		elif sections[n-1].tower == 2 and t == 1:
+			auto(n + 1, 3)
+			sections[n-1].rearrange(t)
+			auto(n+1, 1)
+		elif sections[n-1].tower == 2 and t == 3:
+			auto(n + 1, 1)
+			sections[n-1].rearrange(t)
+			auto(n+1, 3)
+		elif sections[n-1].tower == 3 and t == 1:
+			auto(n + 1, 2)
+			sections[n-1].rearrange(t)
+			auto(n+1, 1)
+		elif sections[n-1].tower == 3 and t == 2:
+			auto(n + 1, 1)
+			sections[n-1].rearrange(t)
+			auto(n+1, 2)
+	except Exception as e:
+		print(e)
+
 
 def draw():
 	for i in range(len(sections)):
@@ -108,5 +140,6 @@ def generate_tower():
 def main():
 	generate_tower()
 	draw()
-	auto(1,3)
+	play()
+	print('End')
 main()
