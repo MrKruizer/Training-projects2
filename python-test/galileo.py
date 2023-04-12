@@ -11,7 +11,7 @@ def main():
 	_leng = input('Type leng of testing pool in metrical system: ')
 	_sx = input('Type Horizontal speed of ball: ')
 	_sy = input('Type vertical speed of ball: ')
-	if (!str.isnumeric(_leng) || !str.isnumeric(_sx) || !str.isnumeric(_sy)):
+	if (not str.isnumeric(_leng) or not str.isnumeric(_sx) or not str.isnumeric(_sy)):
 		print('Uncorrect input data')
 		return
 	leng = float(_leng)
