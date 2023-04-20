@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{% static "css/styles.css"%}">
+	<title>{%block title%}Default title{% endblock title %}</title>
+</head>
+<body>
+	<header class='sticky pos_top head_foot'>
+		<h1>Header {% block header %}{% endblock header %}</h1>
+		{% block menu %}{% endblock menu %}
+	</header>
+	<main>
+		{% block content %}{% endblock content %}
+	</main>
+	<footer class='sticky pos_bottom head_foot'>
+		<h3>LakeInc. 2023. All rights reserved.</h3>
+	</footer>
+</body>
+</html>

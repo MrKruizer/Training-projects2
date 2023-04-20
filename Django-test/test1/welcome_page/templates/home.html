@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock title %}
+{% block header %}Home{% endblock header %}
+{% block menu %}
+	{% include "menu.html" %}
+{% endblock menu %}
+{% block content %}
+	<h1>Welcome to the club, {{ name | capfirst }}</h1>
+	{% for num in arr %}
+		<h3>{{ num }}</h3>
+	{% endfor %}
+	{% include "banner.html"%}
+{% endblock content %}

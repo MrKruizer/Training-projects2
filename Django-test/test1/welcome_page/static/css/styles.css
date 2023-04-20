@@ -1,0 +1,40 @@
+body{
+	background: rgba(200, 200, 200, 0.6);
+	font: 1em sans-serif;
+	padding:0px;
+	margin:0px;
+}
+body>*{
+	padding:5px	;
+}
+
+.head_foot{
+	background:rgba(0, 0, 0, 0.85);
+	margin:0px;
+}
+.sticky{
+	position: sticky;
+}
+.pos_top{
+	top:0px;
+}
+.pos_bottom{
+	bottom: 0px;
+}
+footer h3{
+	margin: 0px;
+	padding: 0px;
+}
+.alert
+{
+	color: red
+}
+.form_group
+{
+	margin:10px 0,
+}
+.from_group input
+{
+	height: 25px;
+	border-radius: 5px;
+}
