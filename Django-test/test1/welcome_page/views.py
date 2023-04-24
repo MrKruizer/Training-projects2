@@ -2,7 +2,9 @@ from django.http import HttpResponse, HttpResponseRedirect, HttpResponsePermanen
 from django.core.serializers.json import DjangoJSONEncoder
 from django.template import RequestContext
 from django.shortcuts import render
+from .async_access_to_db import acreate_person
 from .forms import UserForm
+import asyncio
 
 def index(request):
 	cookies = request.COOKIES
@@ -12,6 +14,7 @@ def index(request):
 
 def home(request):
 	name = request.get_signed_cookie("name", salt="salt")
+	asyncio.run(acreate_person("Bond", "James")) 
 	return render(request, "home.html", context= {'name':name, 'arr':range(1,60)})
 
 def login(request):
