@@ -1,0 +1,28 @@
+{% extends "../base.html" %}
+
+{% block title %}
+	Detail of {{ author }}
+{% endblock title %}
+
+{% block content %}
+	<h1>Author: {{ author }}</h1>
+
+	<p><strong>Last name:</strong> {{ author.last_name }}</p>
+	<p><strong>First name:</strong> {{ author.first_name }}</p>
+	<p><strong>Birth:</strong> {{ author.date_of_birth }} </p>
+	{% if date_of_death %}
+		<p><strong>Died:</strong> {{ author.date_of_death }} </p>
+	{% endif %}
+	<div class="copies">
+		<h4>Books:</h4>
+			{% for book in author.get_books %}
+				<div class="copy">
+					<h1>Title: {{ book.title }}</h1>
+					<p><strong>Summary:</strong> {{ book.summary }}</p>
+					<p><strong>ISBN:</strong> {{ book.isbn }} </p>
+					<p><strong>Language:</strong> {{ book.get_lang_display }} </p>
+					<p><strong>Genre:</strong> {% for genre in book.genre.all %}{{genre}}{% if not forloop.last %}, {% endif %}{% endfor %}</p>
+				</div>
+			{% endfor %}
+	</div>
+{% endblock content %}

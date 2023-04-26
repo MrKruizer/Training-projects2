@@ -1,0 +1,31 @@
+.sidebar-nav{
+	margin-top:20px;
+	padding: 0;
+	list-style: none;
+}
+.copies{
+	margin: 20px 0 0;
+	border: solid black 2px;
+	border-radius: 15px;
+	position: relative;
+	bottom: 5px;
+	right: 5px;
+	box-shadow: 5px 5px 5px 3px rgba(0, 0, 0, 0.8);
+	padding:10px;
+	transition-duration: 1s;
+}
+.copies:hover{
+	bottom:0;
+	right: 0;
+	box-shadow: none;
+}
+.copy{
+	margin:15px;
+	padding: 5px;
+	border: solid blue 2px;
+	border-radius:15px;
+	transition-duration: 1s;
+}
+.copy:hover{
+	box-shadow: inset 3px 3px 3px 3px rgba(0, 0, 0, 0.6);
+}

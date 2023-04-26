@@ -1,0 +1,17 @@
+{% extends '../base.html' %}
+
+{% block title %}
+	Authors
+{% endblock title %}
+{% block content %}
+	<h1>Authors list</h1>
+	{% if all_author_list %}
+		<ul>
+			{% for author in all_author_list %}
+				<li><a href="{{ author.get_absolute_url }}">{{ author }}</a></li>
+			{% endfor %}
+		</ul>
+	{% else %}
+		<p>There are no books in the library</p>	
+	{% endif %}
+{% endblock content %}
